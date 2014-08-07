@@ -6,4 +6,10 @@ Speaking generally, a GET request typically involves the client asking for a set
 
 A POST request, on the other hand, involves the client submission of form data to the server and the subsequent creation of a new resource.
 
-There are other HTTP verbs, but let's not worry about them for now.  
+There are other HTTP verbs, but let's not worry about them for now.
+
+## Problem Statement 1
+
+Examine the contents of the `env` hash that gets passed into the .call method of your Rack Application.  Is there any clue as to which type request is being made? In other words, what key corresponds to the HTTP Verb for a given request?
+
+## Problem Statement 2
