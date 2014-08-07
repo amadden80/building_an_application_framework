@@ -62,6 +62,14 @@ How can I write the below markup to a file `beatles.html`?
 ```
 
 ---
+
+##Problem statement 4:
+
+Read a template file using ruby File class
+Place your templates in a directory and implement them as erb templates
+A call to render prints the rendered template with layout
+
+---
 ## Relevant Notions and Softwares
 - [ERB](http://ruby-doc.org/stdlib-2.1.2/libdoc/erb/rdoc/ERB.html)
 - [File I/0](http://www.ruby-doc.org/core-2.1.2/File.html)
@@ -70,20 +78,33 @@ How can I write the below markup to a file `beatles.html`?
 ``` ruby
   class HtmlBuilder
 
+    def initialize(filename)
+      # Save the filename for which the builder should write to
+    end
+
     def h1(string)
-      # Takes a string and produces a string inside of an h1 tag.
-      # Eventually, it writes that string to a file.
+      # STEP 1
+        # Takes a string and produces a string inside of an h1 tag.
+        # Eventually, it writes that string to a file.
     end
 
     def ul(items)
-      # Take an array of items and returns a ul with lis for each item.
-      # Eventually, it writes string to a file.
+      # STEP 2
+        # Take an array of items and returns a ul with lis for each item.
+        # Eventually, it writes string to a file.
+    end
+
+    def render(filename)
+      # STEP 4
+        # Take, read, and render a template file[name]
+        # Eventually, it writes string to a file.
     end
 
     private
 
     def layout
-      # Returns boilerplate html inside of which additional markdown can be rendered.
+      # STEP 3
+        # Returns boilerplate html inside of which additional markdown can be rendered.
     end
 
     def print(html_string)
