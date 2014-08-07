@@ -1,0 +1,9 @@
+## Introduction
+
+The HTTP protocol specifies that a client can make different types of request to a server.
+
+Speaking generally, a GET request typically involves the client asking for a set of resources from the server.
+
+A POST request, on the other hand, involves the client submission of form data to the server and the subsequent creation of a new resource.
+
+There are other HTTP verbs, but let's not worry about them for now.  
