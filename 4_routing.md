@@ -17,4 +17,12 @@ A router should have a `process` method.  We leave it to you to determine what a
 
 ## Problem Statement 3
 
-What if we are requesting a particular resource?  
+What if we are requesting a particular resource?
+
+Can our router appropriately handle a GET request to '/beatles/5' (i.e. a request for Stu Sutcliffe)?  We need to test this incoming path against some sort of regular expression to match it to the appropriate route.  
+
+
+
+
+
+s

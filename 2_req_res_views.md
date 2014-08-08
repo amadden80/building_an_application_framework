@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 We interact with web applications through the browser and the HTTP protocol.  Now that we have the ability to procedurally generate markup, how can we do so via browswer interaction / HTTP requests?
 

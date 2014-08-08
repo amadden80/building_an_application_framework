@@ -18,5 +18,5 @@ Add functionality to your application so that it is in accord with the following
 
 | HTTP Request | Behavior |
 |------|-----|
-| GET '/beatles' or GET '/stones'| Renders list of band members and a form with a single field with name="member" |
-| POST '/beatles' or POST '/stones' | Form data is pulled out of parameters and a new member is created (i.e. appended to the existing array).  Site redirects to either '/beatles' or '/stones'.  This reflects the fact that we do not render html from a POST request, by convention.
+| `GET '/beatles'`  `GET '/stones'`| Renders list of band members and a form with a single field with name="member" |
+| `POST '/beatles'` `POST '/stones'`| Form data is pulled out of parameters and a new member is created (i.e. appended to the existing array).  HTML reflecting additional member is sent back to the client.  **NOTE:** Typically we do not render HTML from a post request but it is okay for the purpose of this exercise.  
