@@ -44,6 +44,21 @@ module PassiveRecord
       @attributes = attributes #all attributes stored in single instance variable
     end
 
+    def method_missing(*args)
+
+      # This is fancy metaprogramming so that we don't need to write
+      # instance methods for each attribute defined for a given class.
+      # When we call `beatle.name`, for instance, method_missing will be called.
+      # But rather than throw an error, it will capture the method name
+      # and use it as a key to the objects attributes hash.  Importantly,
+      # a call to super preserves the functionality of method_missing should
+      # neither of our gaurd clauses be satisfied.
+
+      return @attributes[args[0]].to_i if !@attributes[args[0]].to_i.zero? #returns integer if it can be parsed into int
+      return @attributes[args[0]] if @attributes[args[0]]
+      super
+    end
+
     def self.table_name
       self.name.downcase+"s"
     end
@@ -52,8 +67,34 @@ module PassiveRecord
       # saves resource to database and returns object with id attribute set.
     end
 
-    def update
-      # 
+    def update(attributes)
+      # updates specific attributes for a given resource.
+    end
+
+    def self.create(attributes={})
+      # instantiates an object and saves to database
+    end
+
+    def self.delete(id)
+      # deletes a specified resource from the database
+    end
+
+    def self.all
+      # returns all records
+    end
+
+    def self.find(id)
+      # finds a specfied record.  
+      # Raises PassiveRecord::RecordNotFound error if
+      # record not found.
+    end
+
+    def self.first
+
+    end
+
+    def self.last
+
     end
   end
 
@@ -66,3 +107,8 @@ module PassiveRecord
 end
 
 ```
+## Things to keep in mind
+
+- Should one be able to alter `created_at` and `id` columns?  Do we need to do anything to prevent this?
+
+- Of what type of object are our records when they come back from the database?  Of what type should they be?
