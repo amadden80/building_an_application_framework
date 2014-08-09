@@ -1,8 +1,8 @@
 ## Introduction
 
-By now, our application can handle basic HTTP GET and POST requests.  But our code is pretty ugly.  It has big, ugly control flow statements and is not particularly object oriented.  It makes sense for us to develop a Class that tells our application how to react when different types of requests come in.  
+By now, our application can handle basic HTTP GET and POST requests.  But our code is... pretty ugly.  It has big, ugly control flow statements and is not particularly object oriented.  It makes sense for us to develop an object that tells our application how to react when different types of requests come in.  
 
-Enter the router.  
+Enter the Router class.  
 
 
 ## Problem Statement 1
@@ -19,4 +19,4 @@ A router should have a `process` method.  We leave it to you to determine what a
 
 What if we are requesting a particular resource?
 
-Can our router appropriately handle a GET request to '/beatles/5' (i.e. a request for Stu Sutcliffe)?  We need to test this incoming path against some sort of regular expression to match it to the appropriate route.  
+Can our router appropriately handle a GET request to '/beatles/5' (i.e. a request for Stu Sutcliffe)?  We  mayneed to test this incoming path against some sort of regular expression to match it to the appropriate route.  
