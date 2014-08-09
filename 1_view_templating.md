@@ -65,8 +65,10 @@ How can I write the below markup to a file `beatles.html`?
 
 ##Problem statement 4:
 
-Read a template file using ruby File class
-Place your templates in a directory and implement them as erb templates
+Read a template file using ruby File class.
+
+Place your templates in a directory and implement them as erb templates.
+
 A call to render prints the rendered template with layout
 
 ---
