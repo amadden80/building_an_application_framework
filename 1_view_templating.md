@@ -82,19 +82,19 @@ A call to render prints the rendered template.
     end
 
     def h1(string)
-      # STEP 1
+      # Problem Statement 1
         # Takes a string and produces a string inside of an h1 tag.
         # Eventually, it writes that string to a file.
     end
 
     def ul(items)
-      # STEP 2
+      # Problem Statement 2
         # Take an array of items and returns a ul with lis for each item.
         # Eventually, it writes string to a file.
     end
 
     def render(filename)
-      # STEP 4
+      # Problem Statement 4
         # Take, read, and render a template file[name]
         # Eventually, it writes string to a file.
     end
@@ -102,7 +102,7 @@ A call to render prints the rendered template.
     private
 
     def layout
-      # STEP 3
+      # Problem Statement 3
         # Returns boilerplate html inside of which additional markdown can be rendered.
     end
 
