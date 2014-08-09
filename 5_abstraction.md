@@ -22,8 +22,8 @@ How can a access params from a given request inside of a block of code?
 ```ruby
 
 class MyApp < Application
-  get '/beatles/:id' do
-    beatle = Beatle.find(param[:id])
+  get '/beatles/:message' do
+    puts params[:message]
   end
 end
 
