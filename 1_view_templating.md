@@ -65,8 +65,8 @@ How can I write the below markup to a file `beatles.html`?
 
 ##Problem statement 4:
 
-Write erb templates in a new directory (including layout.erb).
-A call to render prints a rendered template & layout
+Write erb templates in a new directory
+A call to render prints the rendered template
 
 ---
 ## Relevant Notions and Softwares
